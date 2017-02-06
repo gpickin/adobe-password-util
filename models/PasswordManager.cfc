@@ -1,7 +1,8 @@
 /**
-	I am a utility for managing Adobe ColdFusion passwords for data sources and mail servers
+*	I am a utility for managing Adobe ColdFusion passwords for data sources and mail servers
+*	I am not a singleton since I hold state (seed properties)
 */
-component accessors='true' singleton {
+component accessors='true' {
 
     property name='seed';
     property name='Algorithm';
