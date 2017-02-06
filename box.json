@@ -1,6 +1,6 @@
 {
     "name":"Adobe Pasword Util",
-    "version":"1.0.0",
+    "version":"1.0.1",
     "author":"Brad Wood",
     "homepage":"https://github.com/bdw429s/adobe-password-util",
     "documentation":"https://github.com/bdw429s/adobe-password-util",
@@ -9,14 +9,14 @@
         "URL":"https://github.com/bdw429s/adobe-password-util.git"
     },
     "bugs":"https://github.com/bdw429s/adobe-password-util/issues",
-    "slug":"lucee-password-util",
+    "slug":"adobe-password-util",
     "shortDescription":"A utility to manage passwords for Adobe server installs.",
     "type":"modules",
     "scripts":{
         "postVersion":"package set location='bdw429s/adobe-password-util#v`package version`'",
         "postPublish":"!git push --follow-tags"
     },
-    "location":"bdw429s/adobe-password-util#v1.0.0",
+    "location":"bdw429s/adobe-password-util#v1.0.1",
     "dependencies":{
         "propertyFile":"^1.0.0"
     }
