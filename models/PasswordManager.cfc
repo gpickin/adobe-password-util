@@ -25,8 +25,8 @@ component accessors='true' {
 		var propertyFile = wirebox.getInstance( 'PropertyFile@PropertyFile' )
 			.load( seedpropertiesPath );
 		
-		setSeed( propertyFile.getProperty( 'seed', '' ) );
-    	setAlgorithm( propertyFile.getProperty( 'algorithm', '' ) );
+		setSeed( propertyFile.get( 'seed', '' ) );
+    	setAlgorithm( propertyFile.get( 'algorithm', '' ) );
     	
     	return this;
 	}
