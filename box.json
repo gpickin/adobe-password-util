@@ -1,6 +1,6 @@
 {
     "name":"Adobe Pasword Util",
-    "version":"1.0.2",
+    "version":"1.0.3",
     "author":"Brad Wood",
     "homepage":"https://github.com/bdw429s/adobe-password-util",
     "documentation":"https://github.com/bdw429s/adobe-password-util",
@@ -16,7 +16,7 @@
         "postVersion":"package set location='bdw429s/adobe-password-util#v`package version`'",
         "postPublish":"!git push --follow-tags"
     },
-    "location":"bdw429s/adobe-password-util#v1.0.2",
+    "location":"bdw429s/adobe-password-util#v1.0.3",
     "dependencies":{
         "propertyFile":"^1.0.0"
     }
