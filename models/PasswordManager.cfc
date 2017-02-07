@@ -19,7 +19,7 @@ component accessors='true' {
 	// without the seed used encrypt it.  Read the current seen and algorithm from a properties file in the CF install home.
 	function setSeedProperties( required string seedpropertiesPath ) {
 		if( !fileExists( seedpropertiesPath ) ) {
-			throw "Seed.properties file doesn't exist. Cannot decrypt passwords";
+			throw "Seed.properties file doesn't exist. Cannot decrypt passwords. [#seedpropertiesPath#]";
 		}
 		
 		var propertyFile = wirebox.getInstance( 'PropertyFile@PropertyFile' )
