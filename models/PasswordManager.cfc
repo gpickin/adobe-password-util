@@ -40,7 +40,11 @@ component accessors='true' {
     public string function decryptDataSource( required string pass ) {
     	if( !len( pass ) ) { return ''; }
     	var secretKey = _generate3DesKey( seed );
-		return decrypt( pass, secretKey, getAlgorithm(), "Base64");
+    	try {
+			return decrypt( pass, secretKey, getAlgorithm(), "Base64");
+		} catch( any e ) {
+			return 'ERROR DECRYPTING: [#e.message#]';
+		}
     }	
 
 	// Same as data source for now
@@ -63,7 +67,7 @@ component accessors='true' {
 		if( !structKeyExists( arguments, 'fromString' ) ){
 			return generateSecretKey( 'DESEDE' );
 		}
-		var secretKeySpec = createObject( 'java', 'javax.crypto.spec.SecretKeySpec' ).init( arguments.fromString.getBytes(), 'DESEDE' );
+		var secretKeySpec = createObject( 'java', 'javax.crypto.spec.SecretKeySpec' ).init( arguments.fromString.getBytes(), getAlgorithm() );
 		return toBase64( secretKeySpec.getEncoded() );
 	}
 }
