@@ -18,7 +18,9 @@ component accessors='true' {
 	// In CF10+ the seed and encryption algorithm can be different on each server.  This is so an encryted password by itself is useless
 	// without the seed used encrypt it.  Read the current seen and algorithm from a properties file in the CF install home.
 	function setSeedProperties( required string seedpropertiesPath ) {
-		if( !fileExists( seedpropertiesPath ) ) {
+		if( right( seedPropertiesPath, 10 ) != 'properties' ){
+                        return this;
+                } else if( !fileExists( seedpropertiesPath ) ) {
 			throw "Seed.properties file doesn't exist. Cannot decrypt passwords. [#seedpropertiesPath#]";
 		}
 		
